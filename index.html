@@ -68,19 +68,19 @@
 
         .star-rating {
             font-size: 1.3em;
-            color: #444; /* Cor para estrelas vazias */
+            color: #444;
             letter-spacing: 2px;
         }
 
         .star-rating .filled-star {
-            color: #ffd700; /* Cor para estrelas preenchidas */
+            color: #ffd700;
         }
-        
+
         .debuff-section {
             background-color: #2a2a2a;
             padding: 20px;
             border-radius: 8px;
-            border-left: 5px solid #f38ba8; /* Vermelho */
+            border-left: 5px solid #f38ba8;
         }
 
         .debuff-section h2 {
@@ -93,14 +93,14 @@
         }
 
         .debuff-section p {
-            color: #a6adc8; /* Cor secundária do texto */
+            color: #a6adc8;
         }
 
         .debuff-table {
             width: 100%;
             margin-top: 15px;
         }
-        
+
         .debuff-table td {
             padding: 8px;
             border-bottom: 1px solid #444;
@@ -108,7 +108,7 @@
 
         .debuff-table td:first-child {
             font-weight: bold;
-            color: #cdd6f4; /* Cor primária do texto */
+            color: #cdd6f4;
         }
 
         .debuff-table tr:last-child td {
@@ -141,54 +141,25 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Padrão</td>
-                <td class="star-rating"><span class="filled-star">★★</span>★★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★</span>★★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★</span>★★★★★</td>
-            </tr>
-            <tr>
-                <td>Ofensiva</td>
-                <td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★</span>★★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★</span>★★★★★</td>
-            </tr>
-            <tr>
-                <td>Ultra-Ofensiva</td>
-                <td class="star-rating"><span class="filled-star">★★★★★</span>★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★★</span>★★★★</td>
-                <td class="star-rating"><span class="filled-star">★</span>★★★★★★</td>
-            </tr>
-            <tr>
-                <td>Controle de Bola</td>
-                <td class="star-rating"><span class="filled-star">★★</span>★★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★★</span>★★★★</td>
-            </tr>
-            <tr>
-                <td>Tiki-Taka</td>
-                <td class="star-rating"><span class="filled-star">★★★</span>★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★★</span>★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★★</span>★★★★</td>
-            </tr>
-            <tr>
-                <td>Defensivo</td>
-                <td class="star-rating"><span class="filled-star">★</span>★★★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★★</span>★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td>
-            </tr>
-            <tr>
-                <td>Ultra-Defensivo</td>
-                <td class="star-rating"><span class="filled-star">★</span>★★★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★</span>★★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★★★★</span>★★★★</td>
-            </tr>
-            <tr>
-                <td>No Control</td>
-                <td class="star-rating"><span class="filled-star">★</span>★★★★★★</td>
-                <td class="star-rating"><span class="filled-star">★</span>★★★★★★</td>
-                <td class="star-rating"><span class="filled-star">★★★★★★</span>★★★</td>
-            </tr>
+            <!-- Maior ATK primeiro -->
+            <tr><td>Ultra-Ofensiva</td><td class="star-rating"><span class="filled-star">★★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td></tr>
+            <tr><td>Blitzkrieg</td><td class="star-rating"><span class="filled-star">★★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
+            <tr><td>Pressão Alta</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td></tr>
+            <tr><td>Caos Tático</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td></tr>
+            <tr><td>Contra-Ataque</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td></tr>
+            <tr><td>Ofensiva</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
+            <tr><td>Tiki-Taka</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td></tr>
+            <tr><td>Futebol Total</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td></tr>
+            <tr><td>Linha Alta</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
+            <tr><td>Toque Vertical</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
+            <tr><td>Controle de Bola</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td></tr>
+            <tr><td>Posse Extrema</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
+            <tr><td>Padrão</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
+            <tr><td>Gelo no Sangue</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td></tr>
+            <tr><td>Defensivo</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td></tr>
+            <tr><td>Ultra-Defensivo</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★★★★</span>★★★★</td></tr>
+            <tr><td>No Control</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★★★★★★</span>★★★</td></tr>
+            <tr><td>Paredão</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★★★★★★</span>★★★</td></tr>
         </tbody>
     </table>
 
@@ -202,18 +173,9 @@
         </p>
         <table class="debuff-table">
             <tbody>
-                <tr>
-                    <td>1ª Mudança de Tática</td>
-                    <td><code>-1</code> em ATK, MEI e DEF.</td>
-                </tr>
-                <tr>
-                    <td>2ª Mudança de Tática</td>
-                    <td><code>-2</code> em ATK, MEI e DEF.</td>
-                </tr>
-                <tr>
-                    <td>3ª Mudança de Tática</td>
-                    <td><code>-4</code> em ATK, MEI e DEF.</td>
-                </tr>
+                <tr><td>1ª Mudança de Tática</td><td><code>-1</code> em ATK, MEI e DEF.</td></tr>
+                <tr><td>2ª Mudança de Tática</td><td><code>-2</code> em ATK, MEI e DEF.</td></tr>
+                <tr><td>3ª Mudança de Tática</td><td><code>-4</code> em ATK, MEI e DEF.</td></tr>
             </tbody>
         </table>
     </div>
