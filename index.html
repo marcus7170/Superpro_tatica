@@ -1,185 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki de Táticas - BSL SuperPro</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            line-height: 1.6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wiki de Táticas - BSL SuperPro</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #121212;
+        color: #e0e0e0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        line-height: 1.6;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-            background-color: #1e1e1e;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 180, 255, 0.1);
-        }
+    .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        background-color: #1e1e1e;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 180, 255, 0.1);
+    }
 
-        h1, h2 {
-            color: #00b4ff;
-            text-align: center;
-            font-weight: 600;
-            margin-bottom: 25px;
-            border-bottom: 2px solid rgba(0, 180, 255, 0.2);
-            padding-bottom: 10px;
-        }
+    h1 {
+        color: #00b4ff;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 25px;
+        border-bottom: 2px solid rgba(0, 180, 255, 0.2);
+        padding-bottom: 10px;
+    }
 
-        .styled-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 1em;
-            margin-bottom: 40px;
-        }
+    .styled-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1em;
+        margin-bottom: 40px;
+    }
 
-        .styled-table thead tr {
-            background-color: #007bff;
-            color: #ffffff;
-            text-align: left;
-        }
+    .styled-table thead tr {
+        background-color: #007bff;
+        color: #ffffff;
+        text-align: left;
+    }
 
-        .styled-table th, .styled-table td {
-            padding: 12px 15px;
-        }
+    .styled-table th, .styled-table td {
+        padding: 12px 15px;
+    }
 
-        .styled-table tbody tr {
-            border-bottom: 1px solid #333333;
-            transition: background-color 0.3s ease;
-        }
+    .styled-table tbody tr {
+        border-bottom: 1px solid #333333;
+        transition: background-color 0.3s ease;
+    }
 
-        .styled-table tbody tr:nth-of-type(even) {
-            background-color: #2a2a2a;
-        }
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #2a2a2a;
+    }
 
-        .styled-table tbody tr:hover {
-            background-color: #383838;
-        }
+    .styled-table tbody tr:hover {
+        background-color: #383838;
+    }
 
-        .star-rating {
-            font-size: 1.3em;
-            color: #444;
-            letter-spacing: 2px;
-        }
+    .star-rating {
+        font-size: 1.3em;
+        color: #ffd700;
+        letter-spacing: 1px;
+    }
 
-        .star-rating .filled-star {
-            color: #ffd700;
-        }
+    .empty-star {
+        color: #444;
+    }
 
-        .debuff-section {
-            background-color: #2a2a2a;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 5px solid #f38ba8;
-        }
+    .debuff-section {
+        background-color: #2a2a2a;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 5px solid #f38ba8;
+    }
 
-        .debuff-section h2 {
-            margin-top: 0;
-            color: #f38ba8;
-            text-align: left;
-            border-bottom: none;
-            padding-bottom: 0;
-            font-size: 1.5em;
-        }
+    .debuff-section h2 {
+        margin-top: 0;
+        color: #f38ba8;
+        text-align: left;
+        border-bottom: none;
+        padding-bottom: 0;
+        font-size: 1.5em;
+    }
 
-        .debuff-section p {
-            color: #a6adc8;
-        }
+    .debuff-section p {
+        color: #a6adc8;
+    }
 
-        .debuff-table {
-            width: 100%;
-            margin-top: 15px;
-        }
+    .debuff-table {
+        width: 100%;
+        margin-top: 15px;
+    }
 
-        .debuff-table td {
-            padding: 8px;
-            border-bottom: 1px solid #444;
-        }
+    .debuff-table td {
+        padding: 8px;
+        border-bottom: 1px solid #444;
+    }
 
-        .debuff-table td:first-child {
-            font-weight: bold;
-            color: #cdd6f4;
-        }
+    .debuff-table td:first-child {
+        font-weight: bold;
+        color: #cdd6f4;
+    }
 
-        .debuff-table tr:last-child td {
-            border-bottom: none;
-        }
+    .debuff-table tr:last-child td {
+        border-bottom: none;
+    }
 
-        code {
-            background-color: #11111b;
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-family: 'Courier New', Courier, monospace;
-        }
-    </style>
+    code {
+        background-color: #11111b;
+        padding: 2px 5px;
+        border-radius: 4px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+</style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Guia de Táticas</h1>
-    <p style="text-align: center; color: #a6adc8; margin-top: -20px; margin-bottom: 30px;">
-        Cada tática oferece um bônus diferente para os atributos de Ataque, Meio-Campo e Defesa do seu time. Cada estrela (★) equivale a um bônus de <strong>+2 pontos</strong> no atributo correspondente.
-    </p>
+    <h1>Guia de Táticas - BSL SuperPro</h1>
 
     <table class="styled-table">
         <thead>
             <tr>
-                <th>Nome da Tática</th>
-                <th>Ataque (ATK)</th>
-                <th>Meio-Campo (MEI)</th>
-                <th>Defesa (DEF)</th>
+                <th>Tática</th>
+                <th>ATK</th>
+                <th>MEI</th>
+                <th>DEF</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Maior ATK primeiro -->
-            <tr><td>Ultra-Ofensiva</td><td class="star-rating"><span class="filled-star">★★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td></tr>
-            <tr><td>Blitzkrieg</td><td class="star-rating"><span class="filled-star">★★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
-            <tr><td>Pressão Alta</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td></tr>
-            <tr><td>Caos Tático</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td></tr>
-            <tr><td>Contra-Ataque</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td></tr>
-            <tr><td>Ofensiva</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
-            <tr><td>Tiki-Taka</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td></tr>
-            <tr><td>Futebol Total</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td></tr>
-            <tr><td>Linha Alta</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
-            <tr><td>Toque Vertical</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
-            <tr><td>Controle de Bola</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td></tr>
-            <tr><td>Posse Extrema</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
-            <tr><td>Padrão</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td></tr>
-            <tr><td>Gelo no Sangue</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td></tr>
-            <tr><td>Defensivo</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★★★</span>★★★★</td><td class="star-rating"><span class="filled-star">★★★★</span>★★★★</td></tr>
-            <tr><td>Ultra-Defensivo</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★★</span>★★★★★</td><td class="star-rating"><span class="filled-star">★★★★★</span>★★★★</td></tr>
-            <tr><td>No Control</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★★★★★★</span>★★★</td></tr>
-            <tr><td>Paredão</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★</span>★★★★★★</td><td class="star-rating"><span class="filled-star">★★★★★★</span>★★★</td></tr>
+            <!-- Ordenadas por maior ATK -->
+            <tr><td>Blitzkrieg</td><td class="star-rating">★★★★★★★★</td><td class="star-rating">☆☆☆☆☆☆☆☆</td><td class="star-rating">☆☆☆☆☆☆☆☆</td></tr>
+            <tr><td>Linha Alta</td><td class="star-rating">★★★★★★</td><td class="star-rating">★★★</td><td class="star-rating">☆☆☆☆☆☆☆☆</td></tr>
+            <tr><td>Ultra-Ofensiva</td><td class="star-rating">★★★★★★</td><td class="star-rating">★★★</td><td class="star-rating">★</td></tr>
+            <tr><td>Ofensiva</td><td class="star-rating">★★★★★</td><td class="star-rating">★★★</td><td class="star-rating">★★★</td></tr>
+            <tr><td>Caos Tático</td><td class="star-rating">★★★★</td><td class="star-rating">★★★★</td><td class="star-rating">★</td></tr>
+            <tr><td>Pressão Alta</td><td class="star-rating">★★★★</td><td class="star-rating">★★★</td><td class="star-rating">★</td></tr>
+            <tr><td>Contra-Ataque</td><td class="star-rating">★★★★</td><td class="star-rating">★</td><td class="star-rating">★★★</td></tr>
+            <tr><td>Posse Extrema</td><td class="star-rating">★★★</td><td class="star-rating">★★★★★½</td><td class="star-rating">½</td></tr>
+            <tr><td>Toque Vertical</td><td class="star-rating">★★★</td><td class="star-rating">★★★★</td><td class="star-rating">★★</td></tr>
+            <tr><td>Tiki-Taka</td><td class="star-rating">★★★</td><td class="star-rating">★★★</td><td class="star-rating">★★★</td></tr>
+            <tr><td>Futebol Total</td><td class="star-rating">★★½</td><td class="star-rating">★★½</td><td class="star-rating">★★★★</td></tr>
+            <tr><td>Controle de Bola</td><td class="star-rating">★★★</td><td class="star-rating">★★★★</td><td class="star-rating">★★★</td></tr>
+            <tr><td>Gelo no Sangue</td><td class="star-rating">★★★</td><td class="star-rating">★★★</td><td class="star-rating">★★★★</td></tr>
+            <tr><td>Padrão</td><td class="star-rating">★★★</td><td class="star-rating">★★★</td><td class="star-rating">★★★</td></tr>
+            <tr><td>Defensivo</td><td class="star-rating">★</td><td class="star-rating">★★★</td><td class="star-rating">★★★★★</td></tr>
+            <tr><td>Ultra-Defensivo</td><td class="star-rating">★</td><td class="star-rating">★★</td><td class="star-rating">★★★★★★</td></tr>
+            <tr><td>Paredão</td><td class="star-rating">★</td><td class="star-rating">★</td><td class="star-rating">★★★★★★★</td></tr>
+            <tr><td>No Control</td><td class="star-rating">☆☆☆☆☆☆☆☆</td><td class="star-rating">☆☆☆☆☆☆☆☆</td><td class="star-rating">★★★★★★★★★★★</td></tr>
         </tbody>
     </table>
 
     <div class="debuff-section">
         <h2>Mudança de Tática Durante a Partida</h2>
         <p>
-            É possível alterar sua tática durante uma partida em andamento para se adaptar ao seu adversário. No entanto, essa flexibilidade tem um custo: um <strong>debuff cumulativo</strong> que é aplicado a todos os seus atributos (ATK, MEI, DEF).
-        </p>
-        <p>
-            Você pode realizar um máximo de <strong>3 alterações</strong> por partida. O debuff <strong>dobra</strong> a cada nova mudança, tornando cada decisão mais crítica que a anterior.
+            Mudar sua tática durante uma partida é possível, mas cada alteração aplica um <strong>debuff cumulativo</strong> em todos os atributos (ATK, MEI, DEF).
+            O efeito dobra a cada nova mudança.
         </p>
         <table class="debuff-table">
             <tbody>
-                <tr><td>1ª Mudança de Tática</td><td><code>-1</code> em ATK, MEI e DEF.</td></tr>
-                <tr><td>2ª Mudança de Tática</td><td><code>-2</code> em ATK, MEI e DEF.</td></tr>
-                <tr><td>3ª Mudança de Tática</td><td><code>-4</code> em ATK, MEI e DEF.</td></tr>
+                <tr><td>1ª Mudança</td><td><code>-1</code> em ATK, MEI e DEF</td></tr>
+                <tr><td>2ª Mudança</td><td><code>-2</code> em ATK, MEI e DEF</td></tr>
+                <tr><td>3ª Mudança</td><td><code>-4</code> em ATK, MEI e DEF</td></tr>
             </tbody>
         </table>
     </div>
 </div>
-
 </body>
 </html>
